@@ -3,7 +3,6 @@ export interface Course {
   title: string;
   subtitle: string;
   author: string;
-  solved: boolean;
   courseItems: CourseItem[];
 }
 
@@ -34,4 +33,16 @@ export interface Option {
   id: number;
   text: string;
   correct: boolean;
+}
+
+export interface Message {
+  id: string;
+  sender: MessageSender;
+  content: string;
+  timestamp: Date;
+}
+
+export enum MessageSender {
+  User = "User",
+  Bot = "Bot",
 }

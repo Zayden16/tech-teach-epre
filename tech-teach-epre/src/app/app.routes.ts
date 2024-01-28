@@ -25,4 +25,8 @@ export const routes: Routes = [
         (m) => m.CourseItemPage,
       ),
   },
+  {
+    path: 'chat',
+    loadComponent: () => import('./pages/chat/chat.page').then( m => m.ChatPage)
+  },
 ];

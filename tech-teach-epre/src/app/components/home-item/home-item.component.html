@@ -4,8 +4,6 @@
         <h3>{{course?.title}}</h3>
         <p>{{course?.subtitle}}</p>
         <p>by {{course?.author}}</p>
-        <ion-chip *ngIf="course?.solved === true" color="success"
-            >Solved</ion-chip
-        >
+        <ion-chip *ngIf="getCourseStatus()" color="success">Solved</ion-chip>
     </ion-label>
 </ion-item>

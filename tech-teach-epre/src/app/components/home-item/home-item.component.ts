@@ -1,14 +1,14 @@
+import { CommonModule } from "@angular/common";
 import { Component, Input } from "@angular/core";
+import { Router } from "@angular/router"; // Import Router
 import {
   IonBadge,
   IonChip,
   IonItem,
   IonLabel,
 } from "@ionic/angular/standalone";
-import { CommonModule } from "@angular/common";
-import { Course } from "src/model";
-import { Router } from "@angular/router"; // Import Router
 import { CourseOverviewPage } from "src/app/pages/course-overview/course-overview.page";
+import { Course } from "src/model";
 
 @Component({
   selector: "app-home-item",
@@ -27,5 +27,19 @@ export class HomeItemComponent {
     if (this.course && this.course.id) {
       this.router.navigate(["/course", this.course.id]);
     }
+  }
+
+  getCourseStatus() {
+    if (!this.course) {
+      return false;
+    }
+    let isCompleted = true;
+    for (const courseItem of this.course?.courseItems) {
+      if (!courseItem.solved) {
+        isCompleted = false;
+      }
+    }
+
+    return isCompleted;
   }
 }

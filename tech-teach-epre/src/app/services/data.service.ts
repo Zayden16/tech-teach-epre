@@ -11,7 +11,6 @@ export class DataService {
       title: "Introduction to Information Technology",
       subtitle: "Basics of IT and Computing",
       author: "Jane Doe",
-      solved: false,
       courseItems: [
         {
           id: 203,
@@ -19,6 +18,14 @@ export class DataService {
           solved: false,
           type: CourseItemType.Video,
           mediaUrl: "https://www.youtube.com/embed/7yKycb4e7Z0",
+        },
+        {
+          id: 202,
+          title: "Theory About CPUs",
+          solved: false,
+          type: CourseItemType.Text,
+          content:
+            "A central processing unit (CPU)—also called a central processor or main processor—is the most important processor in a given computer. Its electronic circuitry executes instructions of a computer program, such as arithmetic, logic, controlling, and input/output (I/O) operations. This role contrasts with that of external components, such as main memory and I/O circuitry,[1] and specialized coprocessors such as graphics processing units (GPUs).  The form, design, and implementation of CPUs have changed over time, but their fundamental operation remains almost unchanged. Principal components of a CPU include the arithmetic–logic unit (ALU) that performs arithmetic and logic operations, processor registers that supply operands to the ALU and store the results of ALU operations, and a control unit that orchestrates the fetching (from memory), decoding and execution (of instructions) by directing the coordinated operations of the ALU, registers, and other components. Modern CPUs devote a lot of semiconductor area to caches, instruction-level parallelism and privileged modes to support operating systems and virtualization.",
         },
         {
           id: 201,
@@ -57,14 +64,6 @@ export class DataService {
               ],
             },
           ],
-        },
-        {
-          id: 202,
-          title: "Theory About CPUs",
-          solved: false,
-          type: CourseItemType.Text,
-          content:
-            "A central processing unit (CPU)—also called a central processor or main processor—is the most important processor in a given computer. Its electronic circuitry executes instructions of a computer program, such as arithmetic, logic, controlling, and input/output (I/O) operations. This role contrasts with that of external components, such as main memory and I/O circuitry,[1] and specialized coprocessors such as graphics processing units (GPUs).  The form, design, and implementation of CPUs have changed over time, but their fundamental operation remains almost unchanged. Principal components of a CPU include the arithmetic–logic unit (ALU) that performs arithmetic and logic operations, processor registers that supply operands to the ALU and store the results of ALU operations, and a control unit that orchestrates the fetching (from memory), decoding and execution (of instructions) by directing the coordinated operations of the ALU, registers, and other components. Modern CPUs devote a lot of semiconductor area to caches, instruction-level parallelism and privileged modes to support operating systems and virtualization.",
         },
       ],
     },
