@@ -1,0 +1,7 @@
+{
+  "name": "tech-teach-epre",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

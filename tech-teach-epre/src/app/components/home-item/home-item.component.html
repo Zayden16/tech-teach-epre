@@ -1,0 +1,17 @@
+<ion-item [button]="true" (click)="navigateToCourse()">
+    <ion-label>
+        <ion-badge>{{course?.id}}</ion-badge>
+        <h3>{{course?.title}}</h3>
+        <p>{{course?.subtitle}}</p>
+        <p>by {{course?.author}}</p>
+        <ion-chip *ngIf="course?.solved === true" color="success" outline="true"
+            >SOLVED</ion-chip
+        >
+        <ion-chip
+            *ngIf="course?.solved === false"
+            color="warning"
+            outline="true"
+            >OPEN</ion-chip
+        >
+    </ion-label>
+</ion-item>
