@@ -47,6 +47,9 @@ dependencies:
   '@ionic/angular':
     specifier: ^7.5.0
     version: 7.6.6(@angular/core@17.1.1)(@angular/forms@17.1.1)(@angular/router@17.1.1)(rxjs@7.8.1)(zone.js@0.14.3)
+  guid-typescript:
+    specifier: ^1.0.9
+    version: 1.0.9
   ionicons:
     specifier: ^7.2.1
     version: 7.2.2
@@ -5689,6 +5692,10 @@ packages:
   /graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
     dev: true
+
+  /guid-typescript@1.0.9:
+    resolution: {integrity: sha512-Y8T4vYhEfwJOTbouREvG+3XDsjr8E3kIr7uf+JZ0BYloFsttiHU0WfvANVsR7TxNUJa/WpCnw/Ino/p+DeBhBQ==}
+    dev: false
 
   /handle-thing@2.0.1:
     resolution: {integrity: sha512-9Qn4yBxelxoh2Ow62nP+Ka/kMnOXRi8BXnRaUwezLNhqelnN49xKz4F/dPP8OYLxLxq6JDtZb2i9XznUQbNPTg==}

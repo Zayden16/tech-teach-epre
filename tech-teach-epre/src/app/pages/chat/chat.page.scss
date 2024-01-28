@@ -1,0 +1,23 @@
+ion-item {
+  --padding-start: 10px; // Add padding to the left
+  --padding-end: 10px;   // Add padding to the right
+  --inner-padding-end: 0;
+
+  ion-input {
+    flex: 1; // Allows the input to fill the available space
+  }
+
+  ion-button {
+    --width: 40px; // Adjust as needed for square shape
+    --height: 40px; // Adjust as needed for square shape
+    margin-left: 8px; // Spacing between input and button
+  }
+}
+
+.user-message {
+  text-align: right;
+}
+
+.bot-message {
+  text-align: left;
+}

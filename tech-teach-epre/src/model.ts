@@ -38,7 +38,7 @@ export interface Option {
 export interface Message {
   id: string;
   sender: MessageSender;
-  content: string;
+  text: string;
   timestamp: Date;
 }
 
