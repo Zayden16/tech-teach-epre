@@ -6,6 +6,7 @@
             </ion-button>
         </ion-buttons>
         <ion-title>{{course?.title}}</ion-title>
+        <ion-badge slot="end">{{course?.id}}</ion-badge>
     </ion-toolbar>
 </ion-header>
 
@@ -15,4 +16,12 @@
             <ion-title size="large">course-overview</ion-title>
         </ion-toolbar>
     </ion-header>
+
+    <ion-list>
+        <app-course-overview-item
+            *ngFor="let courseItem of course?.courseItems"
+            [courseItem]="courseItem"
+        >
+        </app-course-overview-item>
+    </ion-list>
 </ion-content>

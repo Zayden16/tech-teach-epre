@@ -21,11 +21,11 @@ export class HomeItemComponent {
   @Input() course: Course | undefined;
   coursePage = CourseOverviewPage;
 
-  constructor(private router: Router) {} // Inject Router
+  constructor(private router: Router) {}
 
   navigateToCourse() {
     if (this.course && this.course.id) {
-      this.router.navigate(["/course-overview", this.course.id]);
+      this.router.navigate(["/course", this.course.id]);
     }
   }
 }

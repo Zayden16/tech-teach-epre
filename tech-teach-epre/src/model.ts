@@ -11,21 +11,21 @@ export interface CourseItem {
   id: number;
   title: string;
   solved: boolean;
-  mediaUrl?: string;
   type: CourseItemType;
-  questions: Question[];
+  content?: string;
+  mediaUrl?: string;
+  questions?: Question[];
 }
 
 export enum CourseItemType {
-  Quiz,
-  Video,
-  Text,
+  Quiz = "Quiz",
+  Video = "Video",
+  Text = "Text",
 }
 
 export interface Question {
   id: number;
   question: string;
-  answer: string;
   solved: boolean;
   options: Option[];
 }

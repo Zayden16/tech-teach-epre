@@ -12,10 +12,17 @@ export const routes: Routes = [
     pathMatch: "full",
   },
   {
-    path: "course-overview/:id",
+    path: "course/:courseId",
     loadComponent: () =>
       import("./pages/course-overview/course-overview.page").then(
         (m) => m.CourseOverviewPage,
+      ),
+  },
+  {
+    path: "course/:courseId/course-item/:itemId",
+    loadComponent: () =>
+      import("./pages/course-item/course-item.page").then(
+        (m) => m.CourseItemPage,
       ),
   },
 ];
