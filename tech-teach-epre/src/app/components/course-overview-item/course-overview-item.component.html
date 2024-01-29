@@ -1,7 +1,10 @@
 <ion-item [button]="true" (click)="navigateToCourseItem()">
-    <ion-label>{{courseItem?.title}}</ion-label>
-    <ion-chip>{{courseItem?.type}}</ion-chip>
-    <ion-chip color="success" *ngIf="courseItem?.solved === true"
-        >Solved</ion-chip
-    >
+  <ion-label>{{ courseItem?.title }}</ion-label>
+  <ion-chip>{{ courseItem?.type }}</ion-chip>
+  <ion-chip *ngIf="courseItem?.type === 'Text'" outline="true"
+    >AI-Enhanced</ion-chip
+  >
+  <ion-chip color="success" *ngIf="courseItem?.solved === true"
+    >Solved</ion-chip
+  >
 </ion-item>

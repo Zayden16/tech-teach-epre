@@ -1,6 +1,6 @@
-import { CommonModule } from "@angular/common";
-import { Component, OnInit, ViewChild } from "@angular/core";
-import { FormsModule, NgModel } from "@angular/forms";
+import { CommonModule } from '@angular/common';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormsModule, NgModel } from '@angular/forms';
 import {
   IonButton,
   IonButtons,
@@ -15,16 +15,16 @@ import {
   IonModal,
   IonTitle,
   IonToolbar,
-} from "@ionic/angular/standalone";
-import { HomeItemComponent } from "src/app/components/home-item/home-item.component";
-import { DataService } from "src/app/services/data.service";
-import { OpenaiService } from "src/app/services/openai.service";
-import { Course } from "src/model";
+} from '@ionic/angular/standalone';
+import { HomeItemComponent } from 'src/app/components/home-item/home-item.component';
+import { DataService } from 'src/app/services/data.service';
+import { OpenaiService } from 'src/app/services/openai.service';
+import { Course } from 'src/model';
 
 @Component({
-  selector: "app-home",
-  templateUrl: "home.page.html",
-  styleUrls: ["home.page.scss"],
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
   standalone: true,
   imports: [
     IonHeader,
@@ -51,9 +51,9 @@ export class HomePage implements OnInit {
   courses: Course[] | undefined;
   constructor(
     private dataService: DataService,
-    private openaiService: OpenaiService,
+    private openaiService: OpenaiService
   ) {
-    this.apiKey = "";
+    this.apiKey = openaiService.getApiKey();
   }
 
   ngOnInit(): void {
@@ -61,11 +61,11 @@ export class HomePage implements OnInit {
   }
 
   cancel() {
-    this.modal?.dismiss(null, "cancel");
+    this.modal?.dismiss(null, 'cancel');
   }
 
   confirm() {
     this.openaiService.setApiKey(this.apiKey);
-    this.modal?.dismiss(this.apiKey, "confirm");
+    this.modal?.dismiss(this.apiKey, 'confirm');
   }
 }
